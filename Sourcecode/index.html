@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PokeSearcher</title>
+	<meta content="charset=utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="style.css" rel="stylesheet"/>
+	<script src="jquery-3.1.1.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<nav class="menuBar">
+				<a class='menuItem' href="index.html">Zoek Pokemon</a>
+				<img class='menuItem menuItem--logo' src="logo.png">
+			</nav>
+		</header>
+		<section id="context" class="context">
+			<img id="imagePokemon" class="imagePokemon">
+		  <div id="searchBox" class="searchBox">
+		  	<input type="search" class="searchField" onfocus="searchFieldTextChanged()" onsearch="WhoPokemon('searchField')" placeholder="Search...." id="searchField">
+				<script>document.getElementById("searchField").focus();</script>
+				<i class="btnSearch fa fa-search" onclick="WhoPokemon('btnSearch')"></i>
+				<p class="checkBoxGTD"><input type="checkbox" id="checkBox">Go directly to the details.</p>
+			</div>
+		  <div id="dataBox" class="dataBox">
+				<p class='details details--bigFont' id='name'></p>
+				<p class='details' id='type'>Type:</p>
+				<p class='details' id='weight'><a id='weightIcon'></a></p>
+				<p class='details' id='height'><a id='heightIcon'></a></p>
+				<a href="index.html"><img id="imageTerug" class="imageTerug" src="Terug.png"></a>
+			  <a href='#' id='cryIcon' class='imgCry--position' onclick='Cry()'></a>
+				<p id='nextPrevious'></p>
+			</div>
+	  </section>
+		<footer>
+			<aside class="socialMediaBar">
+				<a href="https://www.facebook.com/"><img class="socialMedia socialMedia--Facebook" src="SocialMedia/facebook_focusoff.png"><a>
+				<a href="https://www.instagram.com/"><img class="socialMedia socialMedia--Instagram" src="SocialMedia/instagram_focusoff.png"><a>
+				<a href="https://nl.pinterest.com/"><img class="socialMedia socialMedia--Pinterest" src="SocialMedia/pinterest_focusoff.png"><a>
+				<a href="https://plus.google.com/"><img class="socialMedia socialMedia--Google" src="SocialMedia/google_focusoff.png"><a>
+				<a href="https://www.linkedin.com/uas/login"><img class="socialMedia socialMedia--Linkedin" src="SocialMedia/linkedin_focusoff.png"><a>
+				<a href="https://twitter.com/?lang=nl"><img class="socialMedia socialMedia--Twitter" src="SocialMedia/twitter_focusoff.png"><a>
+			</aside>
+		</footer>
+	</div>
+</body>
+</html>
